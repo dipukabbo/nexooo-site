@@ -1,6 +1,6 @@
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   background: #fff;
   color: #000;
@@ -11,6 +11,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 .logo {
   color: #3498db;
@@ -22,33 +25,63 @@ nav a {
   text-decoration: none;
   color: #000;
 }
-.hero {
-  padding: 40px;
+.hero-banner {
+  background: linear-gradient(to right, #e0f7ff, #ffffff);
+  padding: 60px 20px;
   text-align: center;
 }
-.hero h2 {
-  font-size: 2rem;
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #000;
 }
-.hero .btn {
+.hero-content p {
+  font-size: 1.2rem;
+  color: #444;
+}
+.btn {
   display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
   background: #3498db;
   color: #fff;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 6px;
+  transition: background 0.3s;
 }
-.sections {
+.btn:hover {
+  background: #2d8bd4;
+}
+.highlight-section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  padding: 40px;
+  padding: 40px 20px;
 }
-.sections div {
-  max-width: 30%;
+.highlight-card {
+  flex: 1;
+  max-width: 300px;
+  background: #f3faff;
+  margin: 10px;
+  padding: 20px;
+  border-left: 4px solid #3498db;
+  border-radius: 8px;
+}
+.highlight-card h3 {
+  margin-top: 0;
+  color: #222;
+}
+.highlight-card p {
+  font-size: 0.95rem;
+  color: #333;
+}
+.cta {
+  background: #e8f6ff;
+  text-align: center;
+  padding: 40px 20px;
 }
 footer {
   text-align: center;
   padding: 20px;
   background: #f0f0f0;
-  margin-top: 40px;
 }
