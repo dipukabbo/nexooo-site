@@ -1,87 +1,114 @@
 
 body {
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  background: #fff;
-  color: #000;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  scroll-behavior: smooth;
 }
 header {
-  background: #f8f8f8;
-  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 20px 40px;
+  background-color: #111;
+  border-bottom: 1px solid #1a1a1a;
 }
 .logo {
-  color: #3498db;
   font-size: 1.8rem;
+  color: #00f0ff;
   font-weight: bold;
+  text-shadow: 0 0 10px #00f0ff;
 }
 nav a {
-  margin-left: 15px;
+  margin-left: 20px;
   text-decoration: none;
-  color: #000;
+  color: #ccc;
+  transition: color 0.3s;
 }
-.hero-banner {
-  background: linear-gradient(to right, #e0f7ff, #ffffff);
-  padding: 60px 20px;
+nav a:hover {
+  color: #00f0ff;
+}
+.hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(145deg, #0d0d0d 60%, #001f33 100%);
   text-align: center;
+  animation: fadeIn 1.5s ease-out;
 }
-.hero-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color: #000;
+.hero-text h1 {
+  font-size: 3rem;
+  color: #00f0ff;
+  text-shadow: 0 0 20px #00f0ff;
 }
-.hero-content p {
+.hero-text p {
   font-size: 1.2rem;
-  color: #444;
+  color: #cfcfcf;
+  margin: 20px 0;
 }
 .btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #3498db;
-  color: #fff;
+  background-color: transparent;
+  border: 2px solid #00f0ff;
+  color: #00f0ff;
+  padding: 12px 24px;
+  border-radius: 30px;
   text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.3s;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
 }
 .btn:hover {
-  background: #2d8bd4;
+  background-color: #00f0ff;
+  color: #000;
 }
-.highlight-section {
+.features {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 40px 20px;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #121212;
 }
-.highlight-card {
-  flex: 1;
-  max-width: 300px;
-  background: #f3faff;
-  margin: 10px;
+.feature-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  margin: 15px;
   padding: 20px;
-  border-left: 4px solid #3498db;
-  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 0 15px #00f0ff33;
+  transition: transform 0.3s;
 }
-.highlight-card h3 {
-  margin-top: 0;
-  color: #222;
+.feature-card:hover {
+  transform: scale(1.05);
 }
-.highlight-card p {
-  font-size: 0.95rem;
-  color: #333;
+.feature-card h2 {
+  color: #00f0ff;
+}
+.feature-card p {
+  color: #ccc;
 }
 .cta {
-  background: #e8f6ff;
   text-align: center;
-  padding: 40px 20px;
+  padding: 60px 20px;
+  background-color: #0d0d0d;
+}
+.cta h2 {
+  font-size: 2rem;
+  color: #00f0ff;
+}
+.cta p {
+  color: #aaa;
+  margin: 20px 0;
 }
 footer {
   text-align: center;
   padding: 20px;
-  background: #f0f0f0;
+  background-color: #111;
+  border-top: 1px solid #1a1a1a;
+  color: #888;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
